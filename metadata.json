@@ -1,0 +1,5 @@
+{
+  "name": "Ocean's Chronicle",
+  "description": "An artistic photo-logging application to track seasonal changes and growth, featuring editorial design and deep backup capabilities.",
+  "requestFramePermissions": ["camera"]
+}

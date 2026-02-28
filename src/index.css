@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-display: "Libre Baskerville", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-brand-bg: #F9F7F2; /* Parchment / Off-white */
+  --color-brand-accent: #8C7355; /* Muted Gold / Bronze */
+  --color-brand-ink: #2C2C2C; /* Soft Charcoal */
+  --color-brand-muted: #A69F92;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-ink font-serif antialiased;
+  }
+}
+
+.classical-card {
+  @apply bg-white border border-brand-accent/20 shadow-[0_4px_20px_rgba(140,115,85,0.05)] rounded-sm;
+}
+
+.classical-btn {
+  @apply bg-brand-accent text-white font-display italic px-8 py-3 rounded-sm hover:bg-brand-ink transition-all duration-500 active:scale-95;
+}
+
+.classical-title {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.time-marker {
+  @apply border-l border-brand-accent/30 pl-6 relative;
+}
+
+.time-marker::before {
+  content: '';
+  @apply absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-brand-accent;
+}
+
+.ornament {
+  @apply h-px w-16 bg-brand-accent/30 mx-auto my-4;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
